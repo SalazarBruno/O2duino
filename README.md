@@ -2,8 +2,8 @@
 A display to show measurements from a O2 sensor controller using Arduino
 
 BOM (Bill of Materials)
-  -Arduino Uno
-  -16x2 LCD Shield
+  - Arduino Uno
+  - 16x2 LCD Shield
   
   
  
