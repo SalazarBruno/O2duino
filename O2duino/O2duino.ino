@@ -65,13 +65,17 @@ void loop() {
   int sensorValue = readInput(A5);
   // Convert the analog reading (which goes from 0 - 1023) to a voltage (0 - 1V):
   //float voltage = sensorValue * (1 / 1023.0);
-  float o2Lambda = (sensorValue * 5) / 1024.0;
+  float o2Lambda = (sensorValue * 5) / 3365.0;
+  float o2Volts = (sensorValue * 5) / 1024.0;
   // print out the value you read:
   Serial.println("###############");
   Serial.print("Logic Value: ");
   Serial.println(sensorValue);
+  Serial.print("Volts Value: ");
+  Serial.println(o2Volts);
   Serial.print("Lambda Value: ");
   Serial.println(o2Lambda);
+  
 
   
   // set the cursor to column 0, line 1
@@ -79,7 +83,7 @@ void loop() {
   lcd.setCursor(0, 1);
   // print the number of seconds since reset:
   lcd.print(o2Lambda);
-  lcd.print(" Λ");
+  lcd.print(" Lambda");
 
 
 //Optional output to Led Array
